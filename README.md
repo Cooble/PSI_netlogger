@@ -42,7 +42,7 @@ t = getTable("1.3.6.1.2.1.4.21.1", host, mapping)
 #       }
 # ]
 print(t[0].nDestination, t[0].nMask, t[0].nInterface, ...) # ...
-print(t) # ->
+printTable(t) # ->
 # Destination  Interface  Metric  NextHop      Type  Mask           
 # 0.0.0.0      0          0       192.168.3.1  4     0.0.0.0        
 # 192.168.2.0  2          0       192.168.2.3  3     255.255.255.0  
@@ -68,9 +68,9 @@ print(t) # ->
 
 
 ## Instalace a spuštění
-
-1. **Stažení projektu:**
-   Naklonujte repozitář:
-   ```bash
-   git clone <URL_REPOZITÁŘE>
-   cd <JMÉNO_PROJEKTU>
+```bash
+git clone https://github.com/Cooble/PSI_netlogger
+cd PSI_netlogger
+pip install -r PSI_netlogger
+python top.py # generates network_topology.png
+```
