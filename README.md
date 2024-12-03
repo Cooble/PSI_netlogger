@@ -1,6 +1,6 @@
 # Net Topologger
 
-Zjišťuje topologii sítě pomocí protokolu SNMP. Síťová topologie je určena z obsahu směrovacích tabulek směrovačů a interfaces.
+Zjišťuje topologii sítě pomocí protokolu SNMP. Síťová topologie je určena z obsahu směrovacích tabulek směrovačů a rozhrani.
 
 
 ## Příklad výstupu:
@@ -53,13 +53,15 @@ printTable(t) # ->
 
 ## Použité technologie
 
-- **Jazyk:** Python 3
 - **Knihovny:**
   - [Scapy](https://scapy.net/) pro práci s DHCP a paketovými operacemi.
   - [PySNMP](https://pysnmp.readthedocs.io/en/latest/) pro komunikaci s protokolem SNMP.
   - [networkx](https://networkx.org/) pro vytvoření grafové struktury
   - [matplotlib](https://matplotlib.org/) pro vytisknutí grafu 
 - **GNS3 projekt:** Aplikace byla testována na GNS3 projektu dostupném [zde](https://home.zcu.cz/~maxmilio/PSI/psi-example-project-1.gns3project).
+
+
+**OID**: https://oid-rep.orange-labs.fr/cgi-bin/display?tree=1.3.6.1.2.1.4.21.1#focus
 
 ## Požadavky
 
@@ -71,6 +73,6 @@ printTable(t) # ->
 ```bash
 git clone https://github.com/Cooble/PSI_netlogger
 cd PSI_netlogger
-pip install -r PSI_netlogger
+pip install -r requirements.txt
 python top.py # generates network_topology.png
 ```
