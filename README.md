@@ -66,6 +66,7 @@ printTable(t) # ->
 ## Požadavky
 
 - GNS3 psi-base-node
+- router: `snmp-server community public RO`
 - `pip install -r requirements.txt`
 
 
