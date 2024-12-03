@@ -14,7 +14,7 @@ Struktura v GNS:
 Aplikace provádí následující kroky:
 1. **Detekce výchozí brány:** Pomocí protokolu DHCP se zjistí IP adresa výchozího směrovače. DHCP Packet je postaven pomocí Scapy.
     - `gateway.py`
-2. **Získání směrovacích tabulek:** Z výchozího směrovače se rekurzivně získávají směrovací tabulky dalších směrovačů v síti (nextHop). (`1.3.6.1.2.1.4.21.1`)
+2. **Získání směrovacích tabulek:** Z výchozího směrovače se rekurzivně získávají směrovací tabulky dalších směrovačů v síti (nextHop). (`1.3.6.1.2.1.4.21.1`) Pokud router neodpovida na SNMP, je preskocen.
     - `snmp.py`
 3. **Detekce rozhraní:** Informace o rozhraních směrovačů z OID `1.3.6.1.2.1.4.20.1`.
     - `top.py`
